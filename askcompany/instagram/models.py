@@ -14,6 +14,10 @@ class Post(models.Model):
     def __str__(self):
         return self.message
 
+    # Default 정렬 추가  id순 정렬.
+    class Meta:
+        ordering = ['-id']
+
     # # 메시지 글자숫자 함수로 리턴해주면 admin.py에 display_liks등록된거에 매핑되어 들어간다.
     # def message_length(self):
     #     return len(self.message)
